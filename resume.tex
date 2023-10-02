@@ -1,0 +1,382 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Aviral Tripathi} % Your Name
+\newcommand{\course}{MTech} % Your Course
+\newcommand{\roll}{M22MA012} % Your Roll No.
+\newcommand{\phone}{8299275325} % Your Phone Number
+\newcommand{\emaila}{vrltrph@gmail.com} %Email 1
+\newcommand{\emailb}{m22ma012@iitj.ac.in} %Email 2
+\newcommand{\github}{AviralTripathim22ma012} %Github
+\newcommand{\website}{https://example.com/} %Website
+\newcommand{\linkedin}{linkedinuser} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{iitj.png}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {Roll No.:\roll} & \href{mailto:\emaila}{\emaila} \\
+  \course &  \href{mailto:\emailb}{\emailb}\\
+  {Data and Computational Science} &  \href{https://github.com/AviralTripathim22ma012}{Github} $|$ \href{https://github.com/AviralTripathim22ma012}{AviralTripathim22ma012}\\
+  {Indian Institute of Technology, Jodhpur} & \href{https://www.linkedin.com/in/aviral-tripathi-215ab61bb} {Linkedin} $|$
+  \href{https://www.linkedin.com/in/aviral-tripathi-215ab61bb}{aviral-tripathi-215ab61bb}
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\section{Education}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1https://www.overleaf.com/project/61fc166d7eab8975b2ab74d0
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  M.Tech. (DCS) & Indian Institute of Technology, Jodhpur (IIT J) & 7.19 (Current) & 2022-Present\\
+  \hline
+  B.Tech. (EE) & National Institute of Technology, Hamirpur (NIT H) & 8.56 & 2018-2022\\ %Optional
+  \hline
+  12th & Central Board of Secondary Education (CBSE) & 82.50\% & 2016-2017 \\
+  \hline
+  10th & Central Board of Secondary Education (CBSE) & 10 CGPA & 2014-2015 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+
+%-----------EXPERIENCE-----------------
+% \section{Experience}
+% \resumeSubHeadingListStart
+
+% \resumeSubheading
+%   {Tata Consultancy Services}{Remote}
+%   {Assistant System Engineer}{Feb. 2022 - Sep. 2022}
+
+%       \resumeItemListStart
+%          \item {During my six-month bench period at TCS, I received comprehensive training in Python, data analysis, and the fundamentals of machine learning.}
+%     \resumeItemListEnd
+
+
+
+\section{THESIS WORK}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {LDP-Net}{Dept. of CSE, IIT Jodhpur}
+  {Supervisor: Dr. Pratik Mazumder}{Feb. 2023 - present}
+  \resumeItemListStart
+  \item {Thesis project on Few-Shot Learning utilizing LDP-Net, advancing AI capabilities in limited data scenarios. Enhanced problem-solving skills.}
+%   \item {Developed a plugin that simplified the debugging process by differentiating log messages with a different colour that helped the support team while investigating incidents.}
+  \resumeItemListEnd
+
+
+    
+    % \resumeSubheading
+    %   {Thinking Stack Inc.}{Bengaluru, India}
+    %   {Full Stack Developer Intern}{Dec. 2018 - Jan. 2019}
+    %   \resumeItemListStart
+    % \item {Developed web app using ReactJS and deployed the app to AWS EC2 using Docker.}
+    %     \item {Made website mobile-friendly and increased Google web dev score by 50 points.}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-----------PROJECTS-----------------
+
+\section{Projects}
+
+
+% \resumeSubHeadingListEnd
+
+% \end{document}
+\resumeSubHeadingListStart
+    \resumeProject
+      {Peer to Peer Architecture implementation (P2P)} %Project Name
+      {Software and data Engineering course assignment } %Project Name, Location Name
+      {Aug. 2023 - Sep. 2023} %Event Dates
+      
+      % {\href{https://github.com/ankit0696/kisan_mitra}{Github}} %Website
+      \resumeItemListStart
+         \item{P2P network: Decentralized, direct sharing of resources, data, and services among peers without a central server.}
+         \item {Utilised SCP (Secure copy protocol) for safe data exchange over VMs on AWS.}
+        \item{used python Sockets enable direct communication between peers in a P2P network.}
+    \resumeItemListEnd
+
+    \resumeProject
+      {Container Deployment On GCP } %Project Name
+      {Software and data Engineering course assignment } %Project Name, Location Name
+      {Sep. 2023 } %Event Dates
+
+      \resumeItemListStart
+        \item {Docker: Platform for creating and running lightweight, isolated software containers.}
+         \item {Created VM on GCP and performed containerization using docker,
+deployed using Google Kubernetes Engine (GKE)}
+    
+    \resumeItemListEnd
+
+
+    \resumeProject
+      {Bloom filters } %Project Name
+      {Algorithms for big data course assignment} %Project Name, Location Name
+      {Jun. 2023 - Jul. 2023} %Event Dates
+
+      \resumeItemListStart
+         \item {A Bloom filter is a space-efficient probabilistic data structure used for fast membership tests by hashing and bit arrays.}
+        \item {Performed the following tasks: designed 5 different universal hash functions, keyword extraction, measured false possitive rate}
+    
+    \resumeItemListEnd
+
+    \resumeProject
+      {Map-Reduce Implementation} %Project Name
+      {Algorithms for big data course assignment} %Project Name, Location Name
+      {Jun. 2023 - Jul. 2023} %Event Dates
+
+      \resumeItemListStart
+         % \item {Developed a Seq2Seq model for Latin to native script conversion using PyTorch}
+         \item {MapReduce: Distributed programming model for processing and generating large datasets.}
+        \item {Develop MapReduce algorithm for web log analysis tasks efficiently.}
+        \item {Tasks included IP count, top IPs, URLs, and status codes, with the use of Use CSV dataset to extract insights from weblogs effectively.}
+    \resumeItemListEnd
+
+    % \resumeProject
+    %   {Language Traslation} %Project Name
+    %   {Deep learning course assignment} %Project Name, Location Name
+    %   {Feb. 2023 - May. 2023} %Event Dates
+    %   {\href{https://github.com/akash1akash1/mask-detection-and-recognition.git}{Github}} %Website
+    %   \resumeItemListStart
+    %      \item {Developed a sign language recognition using a combination of SIFT and SVM }
+    %     \item {Comparative analysis is done by benchmarking the performance SIFT-SVM approach against deep learning models(CNN)}
+    % \resumeItemListEnd
+ 
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+\section{Key Courses Taken}
+ \resumeHeadingSkillStart
+  \resumeSubItem{} % Category
+    {Software and Data Engineering (SDE), Algorithms for Big data (ABD), Data Structures and Algorithms (DSA), Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL), Statistics for Data Science, Financial Engineering, Ethical Issues with AI}
+
+  % \resumeSubItem{} % Category
+  %   {Good command of data structures and algorithms}
+    
+%  \resumeSubItem{Operating Systems}
+%  {Windows, Linux*} 
+% \hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+\section{Technical Skills}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Skills: } % Category
+    { C++ (for DSA), Python (for Deep Learning) }
+ \resumeSubItem{Tools \& OS: } % Category
+    {GitHub, AWS, GCP, GKE, Linux CMD, High Performance Computers (HPC) DGX-2, Kubernetes, Chat GPT } % Skills
+ \resumeSubItem{Libraries/Frameworks: } % Category
+    {Pandas, Numpy, scikit-learn, OpenCV, PyTorch, Matplotlib, Seaborn}
+    
+     \resumeSubItem{Web Skills: } % Category
+    {Docker and Containerization, AWS, GCP, Node.JS }
+%  \resumeSubItem{Operating Systems}
+%  {Windows, Linux*} 
+% \hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+
+% \section{Positions of Responsibility}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Assistant Head Coordinator,} % Position
+%     {Training \& Placement Cell, IIT Patna} %Club,Event
+%     {Present} %Tenure Period
+% \resumePOR{General Secretary,} % Position
+%     {Nexus Coding Club, IEM Kolkata} %Club,Event
+%     {Apr. 2018 - Apr. 2019} %Tenure Period
+% \resumeSubHeadingListEnd
+% \vspace{-4mm}
+
+
+\section{Achievements}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{GATE RANK } % Award
+    {Secured a rank of 3375, in GATE (EE), 2021, canducted by IIT Bombay} % Event
+     {2021} %Event Year
+    
+\resumePOR{GAP YEAR } % Award
+    {2017-2018 for the preparation of JEE exams } % Event
+    {2017-2018} %Event Year
+    
+    % \resumePOR{Github Arctic Code Vault Contributor } % Award
+    % {Contributed code to several repositories in the 2020 GitHub \\ Archive Program} % Event
+    % {2020} %Event Year
+
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+\section{Certifications}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{}{
+Udemy certification on Prompt Engineering for Chat GPT
+}{}
+
+% \resumePOR{}{
+% NPTEL Certification on Database Management System
+% }{}
+% \resumePOR{}{
+% Internshala Certification on Web Developmet
+% }{}
+\resumeSubHeadingListEnd
+
+
+
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+%-------------------------------------------
+\end{document}
