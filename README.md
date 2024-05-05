@@ -12,7 +12,7 @@ This resume provides a comprehensive overview of my professional background, ski
 
 ## Contents
 
-- [Resume.pdf](Resume.pdf): My latest resume in PDF format.
+- [Resume.pdf](Resume_AIDE.pdf): My latest resume in PDF format.
 
 ## Usage
 
@@ -30,4 +30,4 @@ This resume is for personal use only and may not be reproduced or distributed wi
 
 If you find my resume helpful or informative, consider starring ⭐ this repository!
 
-[![GitHub stars](https://img.shields.io/github/stars/AviralTripathim22ma012/Resume/.svg?style=social&label=Star)](https://github.com/<your_username>/<your_resume_repo>)
+[![GitHub stars](https://img.shields.io/github/stars/AviralTripathim22ma012/Resume/.svg?style=social&label=Star)](https://github.com/AviralTripathim22ma012/Resume/)
